@@ -12,9 +12,6 @@ namespace Belean_Ioan_Daniel_Lab2.Models
         [Display(Name = "Book Title")]
         public string Title { get; set; }
 
-        //[Required]
-        //public string Author { get; set; }
-
         [Column(TypeName = "decimal(6, 2)")]
         public decimal Price { get; set; }
 
@@ -26,6 +23,8 @@ namespace Belean_Ioan_Daniel_Lab2.Models
         public Publisher? Publisher { get; set; } 
 
         public int? AuthorID { get; set; }
-        public Author? Author { get; set; } 
+        public Author? Author { get; set; }
+
+        public ICollection<BookCategory>? BookCategories { get; set; }
     }
 }
